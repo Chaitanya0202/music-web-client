@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes
+} from "react-router-dom";
+import "./App.css";
+import Footer from "./Components/Footer";
+import MusicList from "./Components/MusicList";
+import MusicUpload from "./Components/MusicUpload";
+import Navbar from "./Components/Navbaar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar/>
+        <Routes>
+          {/* <Route exact path="/"  element={<Home/>} /> */}
+          
+          {/* <Route exact path="/contact" element={<Contact/>} /> */}
+          {/* <Route exact path="/event" element={<Event/>} /> */}
+          {/* <Route exact path="/getAllUser" element={<UserTable/>} />
+          <Route exact path="/book" element={<BookingForm/>} /> */}
+          <Route exact path="/" element={<MusicUpload/>} />
+          <Route exact path="/musicList" element={<MusicList/>} />
+          
+          </Routes>
+          </div>
+          <Footer/>
+    </Router>
   );
 }
 
