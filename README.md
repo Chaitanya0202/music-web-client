@@ -1,70 +1,161 @@
-# Getting Started with Create React App
+# Music Metadata Extraction Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a full-stack application that allows users to upload a music file, extract metadata such as filename, artist, album, year, etc., and view the data on the front end. The front end is built with React and styled using Tailwind CSS, while the back end is powered by Spring Boot.
 
-## Available Scripts
+## Table of Contents
+
+- [Music Metadata Extraction Application](#music-metadata-extraction-application)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+  - [Front End](#front-end)
+    - [Installation](#installation)
+    - [Available Scripts](#available-scripts)
+    - [Project Structure](#project-structure)
+    - [Technologies Used](#technologies-used)
+  - [Back End](#back-end)
+    - [Installation](#installation-1)
+    - [Project Structure](#project-structure-1)
+    - [Endpoints](#endpoints)
+    - [Configuration](#configuration)
+    - [Testing](#testing)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Acknowledgments](#acknowledgments)
+
+## Getting Started
+
+To get a local copy up and running, follow these steps.
+
+## Front End
+
+### Installation
+
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/Chaitanya0202/music-web-client
+    ```
+2. **Navigate to the front end directory:**
+    ```sh
+    cd Chaitanya0202/tail-mui
+    ```
+3. **Install dependencies:**
+    ```sh
+    npm install
+    ```
+4. **Start the development server:**
+    ```sh
+    npm start
+    ```
+
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- `npm start`: Runs the app in development mode.
+- `npm test`: Launches the test runner.
+- `npm run build`: Builds the app for production.
+- `npm run eject`: Ejects the configuration files.
+- `npm run lint`: Runs the linter.
+- `npm run format`: Formats the code using Prettier.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **src/**
+  - **components/**: Reusable React components.
+  - **pages/**: Application pages.
+  - **services/**: API calls and service functions.
+  - **styles/**: Tailwind CSS styles.
+  - **App.js**: Main application component.
+  - **index.js**: Entry point of the application.
 
-### `npm test`
+### Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**: JavaScript library for building user interfaces.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- -** Material UI :Utility-first CSS framework for styling.
+- **Axios**: Promise-based HTTP client for the browser.
+- **Jest**: JavaScript testing framework.
+- music-player-frontend/
+├── public/
 
-### `npm run build`
+├── src/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+│   ├── components/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+│   ├── redux/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+│   ├── App.js
 
-### `npm run eject`
+│   ├── index.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+├── package.json
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+└── README.md
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Back End
 
-## Learn More
+### Installation
+## https://github.com/Chaitanya0202/music-player-server
+cd music-player-backend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Navigate to the back end directory:**
+    ```sh
+    cd your-repo/backend
+    ```
+2. **Build the project using Maven:**
+    ```sh
+    ./mvnw clean install
+    ```
+3. **Run the application:**
+    ```sh
+    ./mvnw spring-boot:run
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Project Structure
 
-### Code Splitting
+- **src/main/java/com/yourusername/yourproject/**:
+  - **controller/**: REST controllers handling HTTP requests.
+  - **service/**: Business logic and services.
+  - **dao/**: Data access objects (repositories).
+  - **dto/**: Data Transfer Objects.
+  - **repository/**: Interfaces for database operations.
+  - **YourApplication.java**: Main Spring Boot application class.
+- **src/main/resources/**:
+  - **application.properties**: Configuration properties.
+- **pom.xml**: Project Object Model file for Maven dependencies.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Endpoints
 
-### Analyzing the Bundle Size
+- `POST /api/music/upload`: Uploads a music file and extracts metadata.
+- `GET /api/music/{id}`: Retrieves metadata of a music file by ID.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Configuration
 
-### Making a Progressive Web App
+Edit the `application.properties` file for database and server configuration.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```properties
+server.port=8080
+spring.datasource.url=jdbc:mysql://localhost:3306/yourdb
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+music-player-backend/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   ├── yourusername/
+│   │   │   │   │   ├── controller/
+│   │   │   │   │   ├── service/
+│   │   │   │   │   ├── dao/
+│   │   │   │   │   ├── dto/
+│   │   │   │   │   ├── repository/
+│   │   │   │   │   └── YourApplication.java
+│   │   ├── resources/
+│   │   │   └── application.properties
+│   └── test/
+├── target/
+├── pom.xml
+└── README.md
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
