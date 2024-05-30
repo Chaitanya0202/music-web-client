@@ -1,7 +1,9 @@
 # Music Metadata Extraction Application
 
 This project is a full-stack application that allows users to upload a music file, extract metadata such as filename, artist, album, year, etc., and view the data on the front end. The front end is built with React and styled using Tailwind CSS, while the back end is powered by Spring Boot.
+# output ![musicSS](https://github.com/Chaitanya0202/music-web-client/assets/115619207/c4b09220-4f41-4f20-9e43-1a2d2946b085)
 
+ 
 ## Table of Contents
 
 - [Music Metadata Extraction Application](#music-metadata-extraction-application)
